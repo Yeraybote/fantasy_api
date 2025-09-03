@@ -23,4 +23,5 @@ RUN playwright install chromium --with-deps
 COPY . .
 
 # Arrancar FastAPI (usando shell para expandir ${PORT})
-CMD ["sh", "-c", "uvicorn api:app --host 0.0.0.0 --port ${PORT}"]
+CMD ["sh", "-c", "uvicorn api:app --host 0.0.0.0 --port $PORT"]
+
